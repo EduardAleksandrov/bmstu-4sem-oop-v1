@@ -13,3 +13,6 @@ run_4.tmp:
 
 run_5.inheritance:
 	g++ -std=c++17 ./5.inheritance.cpp -o ./build/5.inheritance -g && ./build/5.inheritance
+
+run_6.uptr:
+	g++ -std=c++17 ./6.uptr.cpp -o ./build/6.uptr -g && ./build/6.uptr
