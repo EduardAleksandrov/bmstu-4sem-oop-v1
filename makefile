@@ -10,3 +10,6 @@ run_3.ref:
 
 run_4.tmp:
 	g++ -std=c++17 ./4.tmp.cpp -o ./build/4.tmp -g && ./build/4.tmp
+
+run_5.inheritance:
+	g++ -std=c++17 ./5.inheritance.cpp -o ./build/5.inheritance -g && ./build/5.inheritance

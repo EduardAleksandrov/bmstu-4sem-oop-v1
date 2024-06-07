@@ -34,10 +34,28 @@ void f(Alloc all)
 }
 //---------------
 
+template<typename T>
+class Dog
+{
+public:
+    template<typename S>
+    void Lay(T x, S y);
+};
+
+template<typename T>
+template<typename S>
+    void Dog<T>::Lay(T x, S y) { std::cout << x << " " << y << std::endl; }
+
+template class Dog<int>; // явное создание шаблона для Dog типа int
+//---------------
 int main(void)
 {
     g(5.5);
 
     f(new Pool());
+
+    
+    Dog<int> dog;
+    dog.template Lay<int>(1, 5);
     return 0;
 }
