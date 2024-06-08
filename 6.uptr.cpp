@@ -3,14 +3,17 @@
 #include <vector>
 
 using namespace std;
+namespace
+{
+    struct A 
+    { 
+        int X = 4;
+        A() = default;
+        A(int x) { X = x; }
+        void printA() { cout << "A struct...." << X << endl; } 
+    }; 
+}
 
-struct A 
-{ 
-    int X = 4;
-    A() = default;
-    A(int x) { X = x; }
-    void printA() { cout << "A struct...." << X << endl; } 
-}; 
 
 int main()
 {
