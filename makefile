@@ -16,3 +16,6 @@ run_5.inheritance:
 
 run_6.uptr:
 	g++ -std=c++17 ./6.uptr.cpp -o ./build/6.uptr -g && ./build/6.uptr
+
+run_7.uptr2:
+	g++ -std=c++17 ./7.uptr2.cpp -o ./build/7.uptr2 -g && ./build/7.uptr2

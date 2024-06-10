@@ -28,6 +28,11 @@ int main()
     v.push_back(make_unique<A>(5));
     v[0]->printA();
 
+    std::shared_ptr<A> b = make_shared<A>();
+    std::weak_ptr<A> bb(b);
+    // b.reset();
+    std::cout << bb.expired() << std::endl;
+
 
     return 0;
 }
