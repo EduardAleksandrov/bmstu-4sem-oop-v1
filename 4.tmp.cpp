@@ -63,6 +63,24 @@ auto findMin(A a, B b) -> decltype(a < b ? a : b)
     return (a < b) ? a : b;
 }
 //---------------
+
+template<typename...Args>
+auto sum(Args...args) 
+{ 
+    auto s = (args+...);
+    return s; 
+}
+
+//---------------
+void data()
+{
+    auto n {0}; // auto работает на этапе компиляции
+    std::cin >> n;
+    std::cout << n << std::endl;
+}
+
+//---------------
+
 int main(void)
 {
     g(5.5);
@@ -76,8 +94,13 @@ int main(void)
 
     // This call returns 3.44 of double type
     std::cout << findMin(4, 3.44) << std::endl;
- 
     // This call returns 3 of double type
     std::cout << findMin(5.4, 3) << std::endl;
+
+
+    std::cout << sum(1,2,3,4.05) << std::endl;
+
+    data();
+
     return 0;
 }
