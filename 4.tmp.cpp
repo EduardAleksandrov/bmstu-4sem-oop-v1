@@ -48,6 +48,21 @@ template<typename S>
 
 template class Dog<int>; // явное создание шаблона для Dog типа int
 //---------------
+template<typename T>
+struct Type2Type
+{
+    using type = T;
+};
+//---------------
+
+// A generic function which finds minimum of two values
+// return type is type of variable which is minimum
+template <class A, class B>
+auto findMin(A a, B b) -> decltype(a < b ? a : b)
+{
+    return (a < b) ? a : b;
+}
+//---------------
 int main(void)
 {
     g(5.5);
@@ -57,5 +72,12 @@ int main(void)
     
     Dog<int> dog;
     dog.template Lay<int>(1, 5);
+
+
+    // This call returns 3.44 of double type
+    std::cout << findMin(4, 3.44) << std::endl;
+ 
+    // This call returns 3 of double type
+    std::cout << findMin(5.4, 3) << std::endl;
     return 0;
 }
