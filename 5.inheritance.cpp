@@ -25,7 +25,7 @@ int main()
     A* p = new B();
     p->f();
     B* t = static_cast<B*>(p);
-    B* tt = dynamic_cast<B*>(p);
+    B* tt = dynamic_cast<B*>(p); // класс должен быть полиморфным
     t->f();
     tt->f();
     delete p;
