@@ -19,3 +19,6 @@ run_6.uptr:
 
 run_7.uptr2:
 	g++ -std=c++17 ./7.uptr2.cpp -o ./build/7.uptr2 -g && ./build/7.uptr2
+
+run_8.iter:
+	g++ -std=c++17 ./8.iter.cpp -o ./build/8.iter -g && ./build/8.iter
