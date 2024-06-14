@@ -24,6 +24,9 @@ int main()
 {
     A* p = new B();
     p->f();
+    const type_info& ti1 = typeid(p);
+    cout << "class: " << ti1.name() << endl;
+
     B* t = static_cast<B*>(p);
     B* tt = dynamic_cast<B*>(p); // класс должен быть полиморфным
     t->f();
