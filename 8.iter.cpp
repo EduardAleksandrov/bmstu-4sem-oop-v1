@@ -99,6 +99,12 @@ public:
     }
 };
 //---------------
+template<typename T>
+auto great(T&& x) -> decltype(x) //! Если мы не указываем точно & или &&, то работает для обоих вариантов
+{
+    return std::forward<T&&>(x);
+}
+//---------------
 int main()
 {
     vector<int> v{1,3,5};
@@ -130,5 +136,10 @@ int main()
         std::cout << *it << " ";
     }
 
+    // auto g;  // обязательно инициализация на этапе компиляции
+    // std::cin >> g;
+    auto grt = great(5.5);
+    std::cout << "\n" << grt << std::endl;
+    
     return 0;
 }
