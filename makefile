@@ -25,3 +25,6 @@ run_7.uptr2:
 
 run_8.iter:
 	g++ -std=c++17 ./8.iter.cpp -o ./build/8.iter -g && ./build/8.iter
+
+run_9.type:
+	g++ -std=c++17 ./9.type.cpp -o ./build/9.type -g && ./build/9.type
