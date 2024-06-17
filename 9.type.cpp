@@ -21,5 +21,11 @@ int main()
     double n = t;
     cout << t << endl;
 
+    int i = 1;
+    int&& rv2 = i+1;
+    auto&& d5 = rv2;
+    cout << d5 << endl;
+
+
     return 0;
 }
