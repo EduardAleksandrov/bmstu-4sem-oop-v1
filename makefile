@@ -28,3 +28,6 @@ run_8.iter:
 
 run_9.type:
 	g++ -std=c++17 ./9.type.cpp -o ./build/9.type -g && ./build/9.type
+
+run_10.move:
+	g++ -std=c++17 ./10.moveconstr.cpp -o ./build/10.moveconstr -g && ./build/10.moveconstr
