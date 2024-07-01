@@ -15,7 +15,7 @@ public:
     B(const B&) { cout << "copy const" << endl; }
     B(B&&) { cout << "move const" << endl; }
     void f() override { cout << "class B" << endl; }
-    
+    ~B() {cout << "destructor B" << endl; }
 };
 
 B g(B x) { return x; }
@@ -36,5 +36,11 @@ int main()
 
     B obj;
     g(obj);
+
+    B* newobj = new B();
+    B** pointer = &newobj;
+    delete newobj;
+    newobj = nullptr;
+    cout << ((*pointer) == nullptr) << endl;
     return 0;
 }
