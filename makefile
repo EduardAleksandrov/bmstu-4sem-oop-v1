@@ -31,3 +31,6 @@ run_9.type:
 
 run_10.move:
 	g++ -std=c++17 ./10.moveconstr.cpp -o ./build/10.moveconstr -g && ./build/10.moveconstr
+
+run_11.private:
+	g++ -std=c++17 ./11.private.cpp -o ./build/11.private -g && ./build/11.private
