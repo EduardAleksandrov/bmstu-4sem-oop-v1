@@ -17,10 +17,19 @@ protected:
 
 class MyThread : public QThread {
 protected:
+    // void run() override 
+    // {
+    //     // Ваша реализация
+    //     std:: cout << "Mythread" << "\n";
+    // }
+    };
+
+class NewThread : public MyThread {
+protected:
     void run() override 
     {
         // Ваша реализация
-        std:: cout << "Mythread" << "\n";
+        std:: cout << "Mythread 2" << "\n";
     }
     };
 class One
@@ -56,7 +65,7 @@ int main()
     Two t;
     std::cout << t.g() << "\n";
 
-    QThread* th = new MyThread();
+    QThread* th = new NewThread();
     th->start();
 
     return 0;
