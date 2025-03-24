@@ -34,3 +34,6 @@ run_10.move:
 
 run_11.private:
 	g++ -std=c++17 ./11.private.cpp -o ./build/11.private -g && ./build/11.private
+
+run_12.threadrun:
+	g++ -std=c++17 ./12.threadrun.cpp -o ./build/12.threadrun -g && ./build/12.threadrun
