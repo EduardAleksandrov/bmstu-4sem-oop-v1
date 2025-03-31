@@ -37,3 +37,7 @@ run_11.private:
 
 run_12.threadrun:
 	g++ -std=c++17 ./12.threadrun.cpp -o ./build/12.threadrun -g && ./build/12.threadrun
+
+
+run_13.akkerman:
+	g++ -std=c++17 ./13.akkerman.cpp -o ./build/13.akkerman -g && ./build/13.akkerman
